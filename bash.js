@@ -29,6 +29,16 @@ process.stdin.on('data', function (data) {
     commands['cat'](filename);
   }
 
+  if (cmd[0] === 'head'){
+    var filename = cmd[1];
+    commands['head'](filename);
+  }
+
+  if (cmd[0] === 'tail'){
+    var filename = cmd[1];
+    commands['tail'](filename);
+  }
+
   //process.stdout.write('You typed: ' + cmd);
   process.stdout.write('\nprompt > ');
 
